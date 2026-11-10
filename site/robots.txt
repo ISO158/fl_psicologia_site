@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /php/
+Disallow: /obrigado.html
+
+Sitemap: https://www.SEUDOMINIO.com.br/sitemap.xml

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamilis Alvares · Psicóloga · Psicanálise e Vincularidade</title>
+<meta name="description" content="Tamilis Alvares, psicóloga (CRP 06/138999). Psicoterapia psicanalítica com ênfase em vincularidade: atendimento individual, de casais e famílias, presencial e online.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ==== VERSÃO 1 · ESPELHO — suave, claro, formas orgânicas ==== */
+:root{
+  --lilas:#AEA4DF;          /* cor enviada */
+  --lilas-claro:#E9E5F7;
+  --lilas-nevoa:#F5F2FC;
+  --lilas-escuro:#6A5CB0;
+  --ameixa:#33295A;
+  --texto:#4A4466;
+  --creme:#FCFBF8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Nunito Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--texto);background:var(--creme);line-height:1.7;font-weight:400;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1160px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--serif);color:var(--ameixa);font-weight:500;line-height:1.12}
+h2{font-size:clamp(2.1rem,4vw,3.2rem)}
+h2 em,h1 em{font-style:italic;color:var(--lilas-escuro)}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--lilas-escuro);font-weight:700;display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+section{padding:clamp(5rem,10vw,8rem) 0;position:relative}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.8rem;border-radius:999px;background:var(--ameixa);color:#fff;text-decoration:none;font-weight:600;letter-spacing:.02em;transition:transform .3s,box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px -12px rgba(51,41,90,.55);background:var(--lilas-escuro)}
+.btn.ghost{background:transparent;color:var(--ameixa);border:1.5px solid var(--lilas)}
+.btn.ghost:hover{background:var(--lilas-claro);box-shadow:none}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:1.4rem 0}
+header.scrolled{background:rgba(252,251,248,.88);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(174,164,223,.35);padding:.8rem 0}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+.logo b{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:var(--ameixa)}
+.logo small{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lilas-escuro)}
+.menu{display:flex;gap:2rem;list-style:none;align-items:center}
+.menu a{text-decoration:none;font-size:.92rem;position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:var(--lilas-escuro);transition:width .35s}
+.menu a:not(.btn):hover::after{width:100%}
+.menu .btn{padding:.7rem 1.3rem;font-size:.88rem}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:1.5px;background:var(--ameixa);margin:7px 6px;transition:.3s}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:7rem;background:radial-gradient(ellipse at 85% 20%,var(--lilas-claro),transparent 55%),radial-gradient(ellipse at 0% 100%,var(--lilas-nevoa),transparent 50%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:4rem;align-items:center}
+.hero h1{font-size:clamp(2.7rem,5.6vw,4.6rem);margin-bottom:1.5rem}
+.hero p.lead{font-size:1.15rem;max-width:34rem;margin-bottom:2.2rem}
+.hero .ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.selos{display:flex;gap:2rem;margin-top:3rem;flex-wrap:wrap}
+.selos div{font-size:.85rem;display:flex;align-items:center;gap:.6rem}
+.selos svg{width:22px;height:22px;stroke:var(--lilas-escuro);fill:none;stroke-width:1.4}
+
+/* ESPELHO orgânico — forma inspirada na imagem de referência */
+.espelho{position:relative;aspect-ratio:4/5;width:100%;max-width:460px;margin-left:auto}
+.espelho .vidro{position:absolute;inset:0;border-radius:58% 42% 46% 54% / 44% 52% 48% 56%;background:linear-gradient(150deg,#fff 0%,var(--lilas-claro) 45%,var(--lilas) 100%);box-shadow:inset 0 0 0 10px rgba(255,255,255,.55),0 40px 80px -30px rgba(106,92,176,.55);overflow:hidden;animation:morph 14s ease-in-out infinite}
+.espelho .vidro::after{content:"";position:absolute;top:-20%;left:-60%;width:40%;height:140%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);transform:rotate(18deg);animation:brilho 7s ease-in-out infinite}
+.espelho .vidro img,.espelho .vidro svg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.espelho .sombra{position:absolute;inset:6% -6% -4% 8%;border-radius:46% 54% 42% 58% / 52% 44% 56% 48%;background:var(--lilas);opacity:.35;z-index:-1;animation:morph 18s ease-in-out infinite reverse}
+@keyframes morph{
+  0%,100%{border-radius:58% 42% 46% 54% / 44% 52% 48% 56%}
+  33%{border-radius:46% 54% 58% 42% / 52% 42% 58% 48%}
+  66%{border-radius:52% 48% 40% 60% / 40% 58% 42% 60%}}
+@keyframes brilho{0%,60%{left:-60%}100%{left:140%}}
+
+/* faixa de palavras */
+.faixa{background:var(--ameixa);color:var(--lilas-claro);padding:1.1rem 0;overflow:hidden;white-space:nowrap}
+.faixa .trilho{display:inline-flex;gap:3rem;animation:corre 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.5rem}
+.faixa .trilho span::after{content:"✦";font-style:normal;font-size:.8rem;margin-left:3rem;color:var(--lilas)}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+/* quando procurar */
+.sinais-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.5rem}
+.sinal{background:#fff;padding:2rem;border-radius:28px;border:1px solid var(--lilas-claro);transition:transform .4s,box-shadow .4s}
+.sinal:hover{transform:translateY(-6px);box-shadow:0 24px 40px -24px rgba(106,92,176,.45)}
+.sinal .num{font-family:var(--serif);font-size:2.4rem;color:var(--lilas);line-height:1}
+.sinal h3{font-size:1.45rem;margin:.6rem 0 .4rem}
+.sinal p{font-size:.95rem}
+
+/* abordagem */
+.abordagem{background:var(--lilas-nevoa)}
+.ab-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:center}
+.ilustra{width:100%;max-width:440px;aspect-ratio:1}
+.ilustra .tr{fill:none;stroke:var(--ameixa);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ilustra .fio{fill:none;stroke:var(--lilas-escuro);stroke-width:1.8;stroke-linecap:round}
+.js .draw path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s cubic-bezier(.6,.1,.2,1)}
+.js .draw.in path{stroke-dashoffset:0}
+.js .draw.in path:nth-of-type(2){transition-delay:.4s}
+.js .draw.in path:nth-of-type(3){transition-delay:1s}
+.ab-txt p{margin-bottom:1.2rem;font-size:1.05rem}
+blockquote{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--ameixa);border-left:2px solid var(--lilas);padding-left:1.4rem;margin:2rem 0;line-height:1.35}
+
+/* atendimentos */
+.serv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.5rem}
+.serv{padding:2.4rem 1.8rem;border-radius:200px 200px 28px 28px;background:linear-gradient(180deg,var(--lilas-claro),#fff 70%);text-align:center;transition:transform .4s}
+.serv:hover{transform:translateY(-8px)}
+.serv svg{width:64px;height:64px;margin:0 auto 1.2rem;stroke:var(--lilas-escuro);fill:none;stroke-width:1.3}
+.serv h3{font-size:1.55rem;margin-bottom:.5rem}
+.serv p{font-size:.93rem}
+
+/* como funciona */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3.5rem;position:relative}
+.passos::before{content:"";position:absolute;top:28px;left:6%;right:6%;height:1px;background:repeating-linear-gradient(90deg,var(--lilas) 0 6px,transparent 6px 12px)}
+.passo{position:relative;text-align:center}
+.passo .bola{width:56px;height:56px;margin:0 auto 1.2rem;border-radius:50%;background:var(--creme);border:1.5px solid var(--lilas);display:grid;place-items:center;font-family:var(--serif);font-size:1.5rem;color:var(--ameixa);position:relative}
+.passo h3{font-size:1.35rem;margin-bottom:.4rem}
+.passo p{font-size:.93rem}
+
+/* sobre */
+.sobre{background:var(--lilas-nevoa)}
+.sobre-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:5rem;align-items:center}
+.sobre .espelho{margin:0 auto}
+.crp{display:inline-block;margin:.4rem 0 1.6rem;font-size:.85rem;letter-spacing:.15em;color:var(--lilas-escuro);font-weight:700}
+.formacao{list-style:none;margin:1.8rem 0 2.2rem}
+.formacao li{padding:.75rem 0 .75rem 2rem;border-bottom:1px solid var(--lilas-claro);position:relative}
+.formacao li::before{content:"";position:absolute;left:0;top:1.2rem;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--lilas-escuro)}
+.preencher{color:#9b93bf;font-style:italic}
+
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem}
+details{border-bottom:1px solid var(--lilas-claro);padding:1.4rem 0}
+summary{cursor:pointer;list-style:none;font-family:var(--serif);font-size:1.4rem;color:var(--ameixa);display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-weight:300;font-size:1.6rem;color:var(--lilas-escuro);transition:transform .35s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding-top:.8rem;animation:abre .5s ease}
+@keyframes abre{from{opacity:0;transform:translateY(-6px)}}
+
+/* CTA final */
+.final{text-align:center;background:var(--ameixa);color:var(--lilas-claro);overflow:hidden}
+.final h2{color:#fff;max-width:46rem;margin:0 auto 1.4rem}
+.final h2 em{color:var(--lilas)}
+.final p{max-width:36rem;margin:0 auto 2.4rem}
+.final .btn{background:var(--lilas);color:var(--ameixa)}
+.final .btn:hover{background:#fff}
+.final .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.18;background:var(--lilas);animation:morph 16s infinite}
+footer{background:#2A2249;color:#bdb5e3;padding:3rem 0 6rem;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+footer .logo b{color:#fff}
+.aviso{margin-top:2rem;font-size:.8rem;opacity:.8}
+
+/* WhatsApp flutuante */
+.wpp{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:.6rem;text-decoration:none;background:#25D366;color:#fff;border-radius:999px;padding:.95rem 1.25rem;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.35);transition:transform .3s}
+.wpp:hover{transform:scale(1.06)}
+.wpp svg{width:26px;height:26px;fill:#fff}
+.wpp::before{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid #25D366;animation:pulso 2.4s infinite}
+@keyframes pulso{to{transform:scale(1.35);opacity:0}}
+
+/* ANIMAÇÕES DE ENTRADA (scroll) */
+.js [data-r]{opacity:0;transform:translateY(34px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js [data-r="esq"]{transform:translateX(-50px)}
+.js [data-r="dir"]{transform:translateX(50px)}
+.js [data-r="zoom"]{transform:scale(.85)}
+.js [data-r].in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .menu{position:fixed;inset:0 0 0 30%;background:var(--creme);flex-direction:column;justify-content:center;transform:translateX(100%);transition:transform .45s;box-shadow:-20px 0 40px rgba(0,0,0,.08)}
+  .menu.open{transform:none}
+  .burger{display:block;z-index:70}
+  .hero-grid,.ab-grid,.sobre-grid,.faq-grid{grid-template-columns:1fr;gap:3rem}
+  .espelho{margin:0 auto;max-width:340px}
+  .sinais-grid,.serv-grid{grid-template-columns:1fr 1fr}
+  .passos{grid-template-columns:1fr 1fr}
+  .passos::before{display:none}
+  .wpp span{display:none}
+}
+@media (max-width:560px){.sinais-grid,.serv-grid,.passos{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js [data-r]{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header id="topo">
+  <div class="wrap nav">
+    <a href="#inicio" class="logo"><b>Tamilis Alvares</b><small>Psicóloga · Psicanálise</small></a>
+    <button class="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    <ul class="menu">
+      <li><a href="#abordagem">Abordagem</a></li>
+      <li><a href="#atendimentos">Atendimentos</a></li>
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+      <li><a class="btn wpp-link" href="#">Agendar</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-r>Psicanálise &amp; Vincularidade</span>
+      <h1 data-r style="--d:.12s">Um espaço para escutar o que se <em>repete</em> nos seus vínculos.</h1>
+      <p class="lead" data-r style="--d:.24s">Psicoterapia psicanalítica para quem sente que algo se repete nas relações — consigo, no casal, na família. Atendimento individual, de casais e famílias, presencial e online.</p>
+      <div class="ctas" data-r style="--d:.36s">
+        <a class="btn wpp-link" href="#">Agende sua sessão</a>
+        <a class="btn ghost" href="#abordagem">Conheça a abordagem</a>
+      </div>
+      <div class="selos" data-r style="--d:.5s">
+        <div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Online e presencial</div>
+        <div><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"/></svg>Sigilo e ética</div>
+        <div><svg viewBox="0 0 24 24"><circle cx="9" cy="12" r="5"/><circle cx="15" cy="12" r="5"/></svg>Individual, casal e família</div>
+      </div>
+    </div>
+    <div class="espelho" data-r="zoom" style="--d:.2s">
+      <div class="sombra"></div>
+      <div class="vidro">
+        <!-- TROCAR por foto: <img src="foto-tamilis.jpg" alt="Tamilis Alvares"> -->
+        <svg viewBox="0 0 400 500" aria-hidden="true">
+          <g fill="none" stroke="#33295A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M150 120c34 0 52 30 46 62l17 30-15 8c4 10 2 15-4 18 5 6 2 13-5 15 2 18-8 30-30 32l-2 70"/>
+            <path d="M150 120c-46 0-70 40-63 92 5 40 26 60 32 120"/>
+            <g opacity=".45"><path d="M250 120c-34 0-52 30-46 62l-17 30 15 8c-4 10-2 15 4 18-5 6-2 13 5 15-2 18 8 30 30 32l2 70"/><path d="M250 120c46 0 70 40 63 92-5 40-26 60-32 120"/></g>
+          </g>
+          <path d="M200 380c-30-40 40-70 0-110s30-70 0-110" fill="none" stroke="#6A5CB0" stroke-width="1.6" stroke-dasharray="3 7" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="faixa" aria-hidden="true"><div class="trilho">
+  <span>escuta</span><span>vínculo</span><span>desejo</span><span>palavra</span><span>laço</span><span>história</span><span>encontro</span><span>escuta</span><span>vínculo</span><span>desejo</span><span>palavra</span><span>laço</span><span>história</span><span>encontro</span>
+</div></div>
+
+<!-- QUANDO PROCURAR -->
+<section id="quando">
+  <div class="wrap">
+    <span class="eyebrow" data-r>Quando procurar</span>
+    <h2 data-r style="--d:.1s">Talvez você se reconheça <em>em alguma destas</em> situações</h2>
+    <div class="sinais-grid">
+      <article class="sinal" data-r style="--d:.05s"><div class="num">01</div><h3>Relações que se repetem</h3><p>A sensação de viver sempre a mesma história, com pessoas diferentes.</p></article>
+      <article class="sinal" data-r style="--d:.15s"><div class="num">02</div><h3>Conflitos no casal</h3><p>Brigas recorrentes, distância, dificuldade de conversar sem ferir.</p></article>
+      <article class="sinal" data-r style="--d:.25s"><div class="num">03</div><h3>Tensões na família</h3><p>Lugares que pesam, segredos, mudanças que desorganizam a convivência.</p></article>
+      <article class="sinal" data-r style="--d:.05s"><div class="num">04</div><h3>Angústia e ansiedade</h3><p>Um mal-estar difícil de nomear, que insiste e paralisa.</p></article>
+      <article class="sinal" data-r style="--d:.15s"><div class="num">05</div><h3>Lutos e separações</h3><p>Perdas, rupturas e recomeços que pedem um tempo de elaboração.</p></article>
+      <article class="sinal" data-r style="--d:.25s"><div class="num">06</div><h3>Sentir-se só</h3><p>Estar rodeado de pessoas e, ainda assim, não se sentir em laço.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ABORDAGEM -->
+<section class="abordagem" id="abordagem">
+  <div class="wrap ab-grid">
+    <svg class="ilustra draw" data-r viewBox="0 0 400 400" aria-hidden="true">
+      <circle cx="200" cy="200" r="170" fill="#E9E5F7"/>
+      <path class="tr" pathLength="1" d="M120 80c34 0 50 30 44 60l16 28-14 7c4 9 2 14-4 17 5 6 2 12-5 14 2 16-8 28-28 30l-2 60M120 80c-42 0-62 36-56 84 4 36 22 56 28 110"/>
+      <path class="tr" pathLength="1" d="M280 80c-34 0-50 30-44 60l-16 28 14 7c-4 9-2 14 4 17-5 6-2 12 5 14-2 16 8 28 28 30l2 60M280 80c42 0 62 36 56 84-4 36-22 56-28 110"/>
+      <path class="fio" pathLength="1" d="M182 168c30-50 76 30 22 50-50 18-60-60-10-56 40 4 30 80-30 120"/>
+    </svg>
+    <div class="ab-txt">
+      <span class="eyebrow" data-r>A abordagem</span>
+      <h2 data-r style="--d:.1s">O que é a <em>psicanálise vincular?</em></h2>
+      <p data-r style="--d:.2s">A psicanálise parte da ideia de que há em nós algo que fala sem que saibamos — o inconsciente. Na análise, a palavra livre abre caminho para que esse saber apareça e ganhe novos sentidos.</p>
+      <p data-r style="--d:.3s">A perspectiva vincular amplia essa escuta: somos constituídos nos laços com o outro — família, casal, grupos, cultura. O sofrimento não mora apenas “dentro” de alguém, mas também no espaço <em>entre</em> as pessoas.</p>
+      <blockquote data-r style="--d:.4s">Escutar o vínculo é escutar o que nasce no encontro — e o que dele ainda pode se transformar.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ATENDIMENTOS -->
+<section id="atendimentos">
+  <div class="wrap">
+    <span class="eyebrow" data-r>Atendimentos</span>
+    <h2 data-r style="--d:.1s">Diferentes <em>configurações</em> de escuta</h2>
+    <div class="serv-grid">
+      <div class="serv" data-r style="--d:.05s"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="16"/></svg><h3>Individual</h3><p>Para adultos que desejam se escutar e compreender as próprias repetições.</p></div>
+      <div class="serv" data-r style="--d:.15s"><svg viewBox="0 0 64 64"><circle cx="24" cy="32" r="14"/><circle cx="40" cy="32" r="14"/></svg><h3>Casal</h3><p>Um espaço para o casal olhar o que construiu e o que deseja reinventar.</p></div>
+      <div class="serv" data-r style="--d:.25s"><svg viewBox="0 0 64 64"><circle cx="32" cy="22" r="12"/><circle cx="22" cy="40" r="12"/><circle cx="42" cy="40" r="12"/></svg><h3>Família</h3><p>Para elaborar juntos conflitos, mudanças e os lugares de cada um.</p></div>
+      <div class="serv" data-r style="--d:.35s"><svg viewBox="0 0 64 64"><rect x="10" y="14" width="44" height="30" rx="4"/><path d="M24 52h16M32 44v8"/><circle cx="32" cy="29" r="6"/></svg><h3>Online</h3><p>Sessões por vídeo, com o mesmo cuidado e sigilo, onde você estiver.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section id="como" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow" data-r>Como funciona</span>
+    <h2 data-r style="--d:.1s">Os primeiros <em>passos</em></h2>
+    <div class="passos">
+      <div class="passo" data-r style="--d:.05s"><div class="bola">1</div><h3>Contato</h3><p>Você me escreve pelo WhatsApp e combinamos um horário.</p></div>
+      <div class="passo" data-r style="--d:.2s"><div class="bola">2</div><h3>Entrevistas iniciais</h3><p>Primeiros encontros para conhecer sua demanda e sua história.</p></div>
+      <div class="passo" data-r style="--d:.35s"><div class="bola">3</div><h3>Sessões regulares</h3><p>Encontros semanais, com horário fixo, presenciais ou online.</p></div>
+      <div class="passo" data-r style="--d:.5s"><div class="bola">4</div><h3>Sigilo</h3><p>Tudo o que é dito é protegido pelo Código de Ética do Psicólogo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="sobre" id="sobre">
+  <div class="wrap sobre-grid">
+    <div class="espelho" data-r="esq">
+      <div class="sombra"></div>
+      <div class="vidro">
+        <!-- TROCAR por foto da psicóloga: <img src="foto-tamilis.jpg" alt="Tamilis Alvares, psicóloga"> -->
+        <svg viewBox="0 0 400 500" aria-hidden="true"><text x="200" y="250" text-anchor="middle" font-family="Cormorant Garamond,serif" font-style="italic" font-size="26" fill="#33295A">sua foto aqui</text></svg>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow" data-r>Sobre mim</span>
+      <h2 data-r style="--d:.1s">Tamilis <em>Alvares</em></h2>
+      <div class="crp" data-r style="--d:.15s">PSICÓLOGA · CRP 06/138999</div>
+      <p data-r style="--d:.2s">Sou psicóloga e atuo a partir da psicanálise, com ênfase na vincularidade. Acredito que cada pessoa carrega uma história tecida em laços — e que é possível, pela palavra, encontrar novas formas de estar consigo e com o outro.</p>
+      <ul class="formacao" data-r style="--d:.3s">
+        <li>Graduação em Psicologia — <span class="preencher">instituição / ano</span></li>
+        <li>Formação em Psicanálise — <span class="preencher">instituição / ano</span></li>
+        <li>Especialização em Psicanálise Vincular — <span class="preencher">a preencher</span></li>
+      </ul>
+      <a class="btn wpp-link" href="#" data-r style="--d:.4s">Converse comigo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="duvidas">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow" data-r>Dúvidas</span>
+      <h2 data-r style="--d:.1s">Perguntas <em>frequentes</em></h2>
+    </div>
+    <div data-r style="--d:.2s">
+      <details open><summary>Quanto tempo dura o tratamento?</summary><p>Não há um prazo fixo. A psicanálise respeita o tempo de cada pessoa; ao longo do processo, avaliamos juntos os caminhos.</p></details>
+      <details><summary>Com que frequência são as sessões?</summary><p>Em geral, semanalmente, com duração aproximada de 50 minutos. A frequência pode ser ajustada conforme a necessidade.</p></details>
+      <details><summary>Na terapia de casal, os dois precisam participar?</summary><p>Sim, o atendimento de casal acontece com ambos. Se apenas um puder vir, podemos conversar sobre a possibilidade de um atendimento individual.</p></details>
+      <details><summary>O atendimento online funciona?</summary><p>Sim. As sessões por vídeo mantêm o mesmo cuidado e sigilo. É importante estar em um lugar reservado e com boa conexão.</p></details>
+      <details><summary>Atende por convênio?</summary><p>Entre em contato pelo WhatsApp para saber sobre valores, reembolso e disponibilidade de horários.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final">
+  <div class="blob" style="width:380px;height:380px;left:-120px;top:-120px"></div>
+  <div class="blob" style="width:300px;height:300px;right:-80px;bottom:-100px"></div>
+  <div class="wrap">
+    <h2 data-r>Cuidar dos seus vínculos é também <em>cuidar de você</em>.</h2>
+    <p data-r style="--d:.1s">Dê o primeiro passo. Escreva para tirar dúvidas ou agendar uma sessão.</p>
+    <a class="btn wpp-link" href="#" data-r="zoom" style="--d:.2s">Falar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="logo"><b>Tamilis Alvares</b><small style="color:#bdb5e3">Psicóloga · CRP 06/138999</small></div>
+      <div>WhatsApp: (11) 98607-1270<br>Atendimento presencial e online</div>
+      <div>© <span id="ano"></span> Tamilis Alvares. Todos os direitos reservados.</div>
+    </div>
+    <p class="aviso">Este site não oferece atendimento de urgência. Em situação de crise, procure o CVV (ligue 188, 24h) ou o SAMU (192).</p>
+  </div>
+</footer>
+
+<a class="wpp wpp-link" href="#" aria-label="Conversar pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+  <span>Fale comigo</span>
+</a>
+
+<script>
+// WhatsApp — número e mensagem inicial
+const WPP='5511986071270';
+const MSG=encodeURIComponent('Olá, Tamilis! Vim pelo site e gostaria de saber mais sobre os atendimentos.');
+document.querySelectorAll('.wpp-link').forEach(a=>{a.href=`https://wa.me/${WPP}?text=${MSG}`;a.target='_blank';a.rel='noopener'});
+// header ao rolar
+const h=document.getElementById('topo');
+addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>40),{passive:true});
+// menu mobile
+const b=document.querySelector('.burger'),m=document.querySelector('.menu');
+b.onclick=()=>m.classList.toggle('open');
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
+// entrada dos elementos conforme o scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('[data-r]').forEach(el=>io.observe(el));
+document.getElementById('ano').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
